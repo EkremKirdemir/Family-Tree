@@ -6,13 +6,9 @@ EKREM KIRDEMİR
 
 Kocaeli University Faculty of Engineering, Computer Engineering 2. Grade kirdemir.ekrem@gmail.com
 
-210202017
-
 YUNUS ERDEM AKPINAR
 
 Kocaeli University Faculty of Engineering, Computer Engineering 2. Grade  akpinaryunuserdem@gmail.com 
-
-210202012
 
 This program reads data from an Excel file and creates the relationships between family members and the graphs that show these relationships. The program creates a Form1 class and two methods named CreateFamilyTrees and CreateButtonsList. The CreateFamilyTrees method opens the Excel file, reads the data on its pages and creates graphical family trees using the PersonUI class. The Create- ButtonsList method creates buttons for GUI. The result of the program is ancestry tree graphs that show the relationships between family members.
 
