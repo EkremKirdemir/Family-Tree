@@ -1,68 +1,67 @@
-﻿PROGRAMLAMA LABORATUVARI
+﻿PROGRAMMIG LABORATORY
 
-PROJE 3
+PROJECT 3
 
-EKREM KIRDEM˙IR
+EKREM KIRDEMİR
 
-Kocaeli Univer¨ sitesi Muhendislik¨ Fakultesi¨ Bilgisayar Muhendisli¨ gi˘ Bol¨ um¨ u¨ 2. sınıf kirdemir.ekrem@gmail.com
+Kocaeli University Faculty of Engineering, Computer Engineering 2. Grade kirdemir.ekrem@gmail.com
 
 210202017
 
-Abstract—Bu program, Excel dosyasından verileri oku- yarak aile uy¨ eleri arasındaki ilis¸kileri ve bu ilis¸kileri goster¨ en grafikleri olus¸turur. Program, bir Form1 sınıfı ve bu sınıfın ic¸inde CreateFamilyTrees ve CreateButtonsList adlı iki yontem¨ ic¸erir. CreateFamilyTrees yontemi,¨ Excel dosyasını ac¸arak sayfalarındaki verileri okur ve PersonUI sınıfını kullanarak grafikselaile agac˘ ¸ları olus¸turur. Create- ButtonsList yontemi¨ ise GUI ic¸in butonları olus¸turur. Pro- gramın sonucu, aile uy¨ eleri arasındaki ilis¸kileri goster¨ en soy agacı˘ grafikleridir.
+YUNUS ERDEM AKPINAR
 
-1. GIRIS¸
+Kocaeli University Faculty of Engineering, Computer Engineering 2. Grade  akpinaryunuserdem@gmail.com 
 
-Soy Agacı˘ programı, kullanıcıların aile uyeleri¨ hakkında grafiksel agac˘ ¸ bic¸iminde bilgi olus¸turma ve gor¨ unt¨ uleme¨ imkanı sunan bir arac¸tır. Program C# diliyle yazılmıs¸tır ve Microsoft Visual Basic ve Microsoft Office Interop Excel kut¨ uphanelerini¨ kullanarak Microsoft Excel hesap tablosundan veri okur ve soy agacını˘ olus¸turur.
+210202012
 
-Program kullanımı kolay ve kullanıcı dostu tasarlanmıs¸tır. Basit ve kolayca kullanılabilen bir arayuze¨ sahiptir ve kullanıcıların aile uyeleri¨ hakkında hızlı ve kolayca bilgi gor¨ unt¨ ulemesine¨ imkan verir. Program ayrıca, kullanıcının farklı soy agacı˘ panelleri arasında gec¸is¸ yapmasına olanak saglayan˘ bir node kumesi¨ de ic¸erir.
+This program reads data from an Excel file and creates the relationships between family members and the graphs that show these relationships. The program creates a Form1 class and two methods named CreateFamilyTrees and CreateButtonsList. The CreateFamilyTrees method opens the Excel file, reads the data on its pages and creates graphical family trees using the PersonUI class. The Create- ButtonsList method creates buttons for GUI. The result of the program is ancestry tree graphs that show the relationships between family members.
 
-2. YO¨ NTEM
+# INTRODUCTION
 
-Program birkac¸ liste ve degis˘ ¸ken bildirerek bas¸lar. Roots listesi soy agac˘ ¸larının root du¨g˘umlerini,¨ satırlar listesi aile uyeleri¨ arasındaki baglantıları˘ ve du¨gmeler˘ listesi GUI’de kullanılan du¨gmeleri˘ sak- layacaktır. tablePath degis˘ ¸keni, programın verileri okuyacagı˘ Excel tablosunun yolunu saklar.
+The Family tree program is a tool that allows users to create and retrieve information about their family unit in the form of a graphical tree. The program is written in C# and uses Microsoft Visual Basic and Microsoft Office Interop Excel frameworks to read data from a Microsoft Excel spreadsheet and create a family tree.
+The program is designed to be easy to use and user friendly. It has a simple and easy to use interface and allows users to quickly and easily retrieve information about family members. The program also includes a node module that allows the user to switch between different family tree panels.
 
-YUNUS ERDEM AKPINAR
+# METHOD
 
-Kocaeli Univer¨ sitesi Muhendislik¨ Fakultesi¨ Bilgisayar Muhendisli¨ gi˘ Bol¨ um¨ u¨ 2. sınıf akpinaryunuserdem@gmail.com        210202012
+The program starts by declaring several lists and variables. The roots list will store the root nodes of the family trees, the rows list will store the links between family members and the buttons list will store the buttons used in the GUI. The tablePath variable stores the path to the Excel table from which the program will read the data.
 
-Program GUI’nin ana formunu temsil eden bir Form1 sınıfına sahiptir. Form1 sınıfı, form yuklendi¨ ginde˘ c¸alıs¸tırılan bir Form1 Load yontemine¨ sahiptir. Bu fonksiyon diger˘ iki yontemi¨ c¸agırır:˘ CreateFamilyTrees ve CreateButtonsList.
+The program has a Form1 class that represents the main form of the GUI. The Form1 class has a Form1 Load method that is executed when the form is loaded. This function connects the other two methods: CreateFamilyTrees and CreateButtonsList.
 
-CreateFamilyTrees yontemi¨ Excel tablosundaki verileri okur ve PersonUI sınıfını kullanarak aile agac˘ ¸larının grafiksel gosterimlerini¨ olus¸turur. Fonksiyon, ExcelApp.Application sınıfının bir orne¨ gini˘ olus¸turarak ve tablePath degis˘ ¸keni tarafından belirtilen Excel tablosunu ac¸mak ic¸in bunu kullanarak bas¸lar. Fonksiyon daha sonra tablodaki sayfalar uzerinde¨ yineleme yaparak her sayfa ic¸in yeni bir soy agacı˘ olus¸turur.
+The CreateFamilyTrees method reads data from an Excel table and creates graphical representations of family trees using the PersonUI class. The function starts by creating an instance of the ExcelApp.Application class and using it to open the Excel table specified by the tablePath variable. The function then iterates over the sheets in the table, creating a new family tree for each sheet.
 
-Fonksiyon, her sayfa ic¸in sayfadaki hucrelerden¨ verileri okur ve bunları soy agacındaki˘ birey- lerin grafiksel temsilleri olan PersonUI nesnelerini olus¸turmak ic¸in kullanır. Fonksiyon daha sonra bu nesneleri GUI’deki uygun panele ekler. Fonksiyon ayrıca c¸izgi nesneleri olus¸turarak ve bunları lines listesine ekleyerek aile uyeleri¨ arasında baglantılar˘ olus¸turur.
+The function reads data from the cells in each sheet and uses it to create PersonUI objects, which are graphical representations of the individuals in the family tree. The function then adds these objects to the appropriate panel in the GUI. The function also creates connections between family members by creating line objects and adding them to the lines list.
+The CreateButtonsList function creates a list of buttons used in the GUI. buttons are created using the Button class and added to the buttons list.
 
-CreateButtonsList fonksiyonu, GUI’de kullanılan butonların bir listesini olus¸turur. butonlar, Button sınıfı kullanılarak olus¸turulur ve buttons listesine eklenir.
+Finally, the program has a Form1 constructor that is responsible for initializing the form and its components. The InitializeComponent function is used to set up the form and its components.
 
-Son olarak, program, formun ve biles¸enlerinin bas¸latılmasından sorumlu olan bir Form1 yapıcıya sahiptir. InitializeComponent fonksiyonu, formu ve biles¸enlerini ayarlamak ic¸in c¸agrılır˘ .
+To understand how the code works, it is important to understand the structure of the Excel table from which the program reads the data. It is important to understand how the table is structured
+is assumed to have four pages representing the individuals in the family tree. Each page contains data about the individuals in the family tree, organized in rows and columns. The columns represent different pieces of information about each individual, such as name, date of birth and blood type. Rows represent the different individuals in the family tree.
 
-Kodun nasıl c¸alıs¸tıgını˘ anlamak ic¸in, programın verileri okudugu˘ Excel tablosunun yapısını anlamak onemlidir¨ . Tablonun, her biri farklı bir soy agacını˘
+The CreateFamilyTrees function reads the data from the Excel table, iterating over the rows and columns of each page. The function reads the data in the cells for each row and uses them to create a PersonUI object. The function then adds the PersonUI object to the appropriate panel in the GUI. The method also creates connections between family members by creating line objects and adding them to the lines list.
 
-temsil eden dort¨ sayfaya sahip oldugu˘ varsayılır. Her sayfa, soy agacındaki˘ bireyler hakkında satırlar ve sutunlar¨ halinde duzenlenmis¨ ¸ veriler ic¸erir. Sutunlar¨ her bir birey hakkında isim, dogum˘ tarihi ve kan grubu gibi farklı bilgi parc¸alarını temsil etmektedir. Satırlar ise soy agacındaki˘ farklı bireyleri temsil eder.
+The PersonUI class is a special class that represents a graphical representation of an individual in the family tree. The class has several properties such as name, surname and dateOfBirth, which represent the first name, last name and date of birth of the individual. The class also has a Draw function which is responsible for drawing the PersonUI object in the GUI.
 
-CreateFamilyTrees fonksiyonu, her sayfanın satırları ve sutunları¨ uzerinde¨ yineleme yaparak Ex- cel tablosundaki verileri okur. Fonksiyon, her satır ic¸in hucrelerdeki¨ verileri okur ve bunları bir Per- sonUI nesnesi olus¸turmak ic¸in kullanır. Fonksiyon daha sonra PersonUI nesnesini GUI’deki uygun pan- ele ekler. Yontem¨ ayrıca, c¸izgi nesneleri olus¸turup bunları lines listesine ekleyerek aile uyeleri¨ arasında baglantılar˘ olus¸turur.
+The CreateButtonsList function creates a list of buttons used in the GUI. These Buttons are created using the Button class and added to the list of buttons.
 
-PersonUI sınıfı, soy agacındaki˘ bir bireyin grafik- sel temsilini temsil eden ozel¨ bir sınıftır. Sınıf, bireyin adını, soyadını ve dogum˘ tarihini temsil eden name, surname ve dateOfBirth gibi c¸es¸itli ozelliklere¨ sahiptir. Sınıf ayrıca PersonUI nes- nesinin GUI’de c¸izilmesinden sorumlu olan bir Draw fonksiyonuna sahiptir.
+### Person Class:
 
-CreateButtonsList fonksiyonu GUI’de kullanılan butonların bir listesini olus¸turur. Bu Butonlar Button sınıfı kullanılarak olus¸turulur ve du¨gmeler˘ listesine eklenir.
+This class represents a Person class in the FamilyTree namespace in the C# programming language. This class represents a person in the family tree and contains information about the person's identity, relationships and personal details.
 
-\1) Person Classı:
+The Person class contains several special fields that store information about the person, including the person's first name, last name, date of birth, mother's and father's names, blood type, occupation, last name before marriage, and gender. The class also includes many publications that provide access to this information.
 
-Bu sınıf, C# programlama dilinde FamilyTree ad alanında bir Person sınıfını temsil eder. Bu sınıf, soy agacında˘ bir kis¸iyi temsil eder ve kis¸inin kimligi,˘ ilis¸kileri ve kis¸isel ayrıntıları hakkında bilgi ic¸erir.
+The Person class has a constructor method that takes many arguments and adjusts the values of the fields based on these arguments. It also has a method called UpdateInfo that allows the information of a person to be updated.
 
-Person sınıfı, kis¸i hakkında bilgi saklayan birc¸ok ozel¨ alan ic¸erir, bunlar arasında kis¸inin adı, soyadı, dogum˘ tarihi, annesinin ve babasının adları, kan grubu, meslegi,˘ evlendikten onceki¨ soyadı ve cin- siyeti yer alır. Sınıf ayrıca, bu bilgilere eris¸imi saglayan˘ birc¸ok yayın ozelli¨ gi˘ de ic¸erir.
+The Person class has a method called AddSpouse that allows a person to marry another person. If the person is already married, the method first checks if the current spouse is the same as the new spouse. If they are not the same, the method replaces the current one with the new one.
 
-Person sınıfı, birc¸ok arguman¨ alan ve bu argumanlara¨ gore¨ alanların degerlerini˘ ayarlayan bir yapıcı metodu vardır. Ayrıca, bir kis¸inin bilgi- lerinin guncellenmesine¨ izin veren UpdateInfo adlı bir metodu da vardır.
+The Person class also has a method called AddChild that allows a person to have c children. This method takes the Person object as an argument and adds it to the list of c children of the current person.
 
-Person sınıfı, bir kis¸inin bas¸ka bir kis¸iyle evlen- mesine izin veren AddSpouse adlı bir metodu vardır. Eger˘ kis¸i zaten evliyse, metod once¨ mevcut es¸in yeni es¸le aynı olup olmadıgını˘ kontrol eder. Aynı degillerse,˘ metod mevcut es¸i yeni es¸le degis˘ ¸tirir.
+The Person class also includes other methods such as Search, SearchInFamilyTree, Remove, and RemoveFromFamilyTree for various purposes, such as searching for a person in the family tree, removing a person from the family tree, and reviewing the information returned in the user interface. These methods search for a person in the family tree, remove a person from the family tree, and perform various other tasks.
 
-Person sınıfı, bir kis¸inin c¸ocukları olmasına izin veren AddChild adlı bir metodu da vardır. Bu metod, Person nesnesini bir arguman¨ olarak alır ve mevcut kis¸inin c¸ocukları listesine ekler.
+# CONCLUSION
 
-Person sınıfı ayrıca, aile agacında˘ bir kis¸i ara- mayı, aile agacından˘ bir kis¸i c¸ıkarmayı ve kul- lanıcı arayuz¨ unde¨ gor¨ unt¨ ulenen¨ bilgileri guncelleme¨ gibi c¸es¸itli amac¸lar ic¸in Search, SearchInFami- lyTree, Remove ve RemoveFromFamilyTree gibi diger˘ metodlar da ic¸erir. Bu metodlar, aile agacında˘ bir kis¸i aramayı, aile agacından˘ bir kis¸i c¸ıkarmayı ve diger˘ c¸es¸itli gore¨ vleri yapar.
+The Family Tree program is a tool that allows users to create and navigate graphical tree-like information about their family members. The program is written in C# and uses Microsoft Visual Basic and Microsoft Office Interop Excel frameworks to read data from a Microsoft Excel spreadsheet and create a family tree.
 
-3. SONUC¸
-
-Soy Agacı˘ programı, kullanıcıların aile uyeleri¨ hakkında grafiksel agac˘ ¸ bic¸iminde bilgi olus¸turma ve gor¨ unt¨ uleme¨ imkanı sunan bir arac¸tır. Program C# diliyle yazılmıs¸tır ve Microsoft Visual Basic ve Microsoft Office Interop Excel kut¨ uphanelerini¨ kullanarak Microsoft Excel hesap tablosundan veri okur ve soy agacını˘ olus¸turur.
-
-4. KAYNAKC¸A
+# BIBLIOGRAPHY
 1. Juan, Angel (2006). ”Ch20 –Data Structures; ID06 - PRO- GRAMMING with JAVA (slide part of the book ’Big Java’, by CayS. Horstmann)” (PDF). p. 3. Archived from the original (PDF) on 2012-01-06. Retrieved 2011-07-10.
 1. Black, Paul E. (2004-08-16). Pieterse, Vreda; Black, Paul E. (eds.). ”linked list”. Dictionary of Algorithms and Data Struc- tures. National Institute of Standards and Technology. Retrieved 2004-12-14.
 1. Antonakos, James L.; Mansfield, Kenneth C. Jr. (1999). Practi- cal Data Structures Using C/C++. Prentice-Hall. pp. 165–190. ISBN 0-13-280843-9.
@@ -86,15 +85,17 @@ Soy Agacı˘ programı, kullanıcıların aile uyeleri¨ hakkında grafiksel aga
 1. https://www.javatpoint.com/c-sharp-abstract
 1. The Microsoft documentation on the Label control in C#: https://docs.microsoft.com/en- us/dotnet/api/system.windows.forms.label?view=netframework-
 
-4.8
-
 23. A tutorial on creating dynamic labels in C#: https://www.c- sharpcorner.com/article/creating-dynamic-labels-in-c-sharp/
 23. A forum discussion on dynamically updating the text of a label in C#: https://www.dreamincode.net/forums/topic/246873- dynamically-update-label-text-c%23/
 
 ![](Aspose.Words.bf976d4e-5d9c-434a-a8a7-4587f2d1c872.003.png)
 
-Fig. 2. psuedo-2![](Aspose.Words.bf976d4e-5d9c-434a-a8a7-4587f2d1c872.004.png)
+Fig. 1. psuedo-1
 
-Fig. 1. psuedo-1![](Aspose.Words.bf976d4e-5d9c-434a-a8a7-4587f2d1c872.005.png)
+![](Aspose.Words.bf976d4e-5d9c-434a-a8a7-4587f2d1c872.004.png)
+
+Fig. 2. psuedo-2
+
+![](Aspose.Words.bf976d4e-5d9c-434a-a8a7-4587f2d1c872.005.png)
 
 Fig. 3. psuedo-3
